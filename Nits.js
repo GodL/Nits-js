@@ -3,18 +3,6 @@ class _Node {
         this.prev = this.next = null;
         this.value = value;
     }
-
-    // set prev(prev) {
-    //     this.prev = prev
-    // }
-
-    // set next(next) {
-    //     this.next = next
-    // }
-
-    // get value() {
-    //     return this.value
-    // }
 }
 
 class _CacheObject {
@@ -23,18 +11,6 @@ class _CacheObject {
         this.value = value
         this.cost = cost
     }
-
-    // get key() {
-    //     return this.key
-    // }
-
-    // get value() {
-    //     return this.value
-    // }
-
-    // get cost() {
-    //     return this.cost
-    // }
 }
 
 class _LRU {
