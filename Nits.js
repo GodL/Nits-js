@@ -42,8 +42,8 @@ class _LRU {
             this.cost -= cache_object.cost
         }else {
             cache_object = new _CacheObject(key,value,0)
-            this.cacheHash.set(key,cache_object)
             node = new _Node(cache_object)
+            this.cacheHash.set(key,node)
             this.count ++ 
             if (this.count > this.limitCount) this._removeTail()
         }
