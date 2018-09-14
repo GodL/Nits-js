@@ -1,3 +1,5 @@
+
+
 class _Node {
     constructor(value) {
         this.prev = this.next = null;
@@ -14,7 +16,6 @@ class _CacheObject {
 }
 
 class _LRU {
-
     constructor(name,limitCost,limitCount) {
         this.name = name;
         if (limitCost == 0 || limitCost == null || limitCost == undefined) limitCost = Number.MAX_VALUE
@@ -25,7 +26,6 @@ class _LRU {
         this.header = this.tail = null;
         this.cacheHash = new Map()
     }
-    
     contains(key) {
         return this.cacheHash.has(key)
     }
@@ -56,6 +56,7 @@ class _LRU {
     get(key) {
         if (key == null || key == undefined) return
         var node = this.cacheHash.get(key)
+        if (node != null && node != undefined ) this._bringToHeader(node)
         return (node == null || node == undefined)  ? null : node.value.value
     }
 
